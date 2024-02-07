@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*background: linear-gradient(135deg, #c10000, #c50202, #cb0202, #ff0000e7);*/
+    background: linear-gradient(135deg, #dc0000);
+
+  background-size: 150% 150%;
+  animation: rotateBackground 20s linear infinite;
+}
+
+@keyframes rotateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.generalContainer {
+  color: #007fff;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.componentsContainer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countriesList {
+  max-height: 70vh;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.countryCard {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+  flex: 0 0 calc(33.33% - 20px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.countryContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.countryName,
+.countryInfo,
+.countryImage,
+.countryDetails {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+}
+
+.countryName {
+  font-size: 1.4rem;
+  color: #34dbcb;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.countryCard:hover {
+  transform: scale(1.05);
+}
+
+.countryName:hover {
+  color: #0051ff;
+}
+
+.countryInfo {
+  color: #ffd700;
+  text-align: center;
+}
+
+.countryImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  animation: rotateImage 15s linear infinite;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.countryDetails {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .container {
+      max-width: 1400px; 
+      margin: 0 auto; 
+  }
+
+}
+
